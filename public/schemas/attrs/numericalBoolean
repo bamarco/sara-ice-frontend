@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/07/schema",
+  "$id": "https://sara-ice-local.mademonkey.com/schemas/numericalBoolean",
+  "title": "Numerical Boolean",
+  "description": "A boolean represented by 0 for false or 1 for true",
+  "type": "integer",
+  "minimum": 0,
+  "maximum": 1
+}

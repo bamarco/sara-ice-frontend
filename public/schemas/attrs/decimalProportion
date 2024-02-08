@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/07/schema",
+  "$id": "https://sara-ice-local.mademonkey.com/schemas/decimalProportion",
+  "title": "Decimal Proportion",
+  "description": "A percentage represented by a decimal between 0.0 and 1.0",
+  "type": "number",
+  "minimum": 0,
+  "maximum": 1
+}
