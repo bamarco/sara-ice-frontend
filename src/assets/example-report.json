@@ -1,0 +1,17 @@
+{
+  "SARA_Geraniol_DPRA_KERAT_HCLAT": {
+    "name": "Geraniol",
+    "assays": [
+      "DPRA",
+      "KeratinoSens",
+      "h-CLAT"
+    ],
+    "Expected ED01": "7.7e+03",
+    "Prob (GHS 1A)": "0.13",
+    "Prob (GHS 1B)": "0.67",
+    "Prob (NC)": "0.20",
+    "ghsBin": "1",
+    "ghsSub": "1B",
+    "ghsBorder": "1B"
+  }
+}

@@ -1,0 +1,27 @@
+%YAML 1.2
+
+# Build instructions for https://builds.sr.ht/
+image: archlinux
+oauth: pages.sr.ht/PAGES:RW
+packages:
+  - npm
+  - hut
+sources:
+  - https://git.sr.ht/~bamarco/sara-ice-frontend
+environment:
+  site: sara-ice-frontend
+  url: sara-ice-local.mademonkey.com
+  config: .build/site-config.json
+tasks:
+  - build: |
+      # build Site
+        cd $site/vite
+        npm ci
+        npm run build
+  - package: |
+      # Package Site
+      ls $site/dist
+      tar -C $site/dist -czf $HOME/site.tar.gz .
+  - upload: |
+      # Upload Site
+      hut pages publish -d $url --site-config $site/$config $HOME/site.tar.gz

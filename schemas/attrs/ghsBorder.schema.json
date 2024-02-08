@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/07/schema",
+  "$id": "https://sara-ice-local.mademonkey.com/schemas/ghsBorder",
+  "title": "GHS~Border~",
+  "description": "Globally Harmonized System for Hazard Communiction Border Classification. Substance assigned to one of five classes: the three classes used in GHS~SUB~ with different criteria (except NC); 1 (sensitizer, but subclassification not possible); NC/1B (substance may or may not be a sensitizer, but 1A can be ruled out)",
+  "type": "string",
+  "oneOf": [
+    {
+      "$ref": "ghsSub.schema.json"
+    },
+    {
+      "title": "Border Category",
+      "enum": [
+        "1",
+        "NC/1B"
+      ]
+    }
+  ]
+}

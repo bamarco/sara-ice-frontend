@@ -1,0 +1,33 @@
+{
+  "GHS": {
+    "definition": "The Globally Harmonized System for Hazard Communication",
+    "urls": [
+      "https://www.osha.gov/hazcom/global",
+      "https://unece.org/ghs-rev2-2007",
+      "https://www.epa.gov/sites/default/files/2015-09/documents/ghscriteria-summary.pdf"
+    ]
+  },
+  "SARA": { "definition": "Skin Allergy Risk Assessment", "urls": [] },
+  "ICE": {
+    "definition": "Integrated Chemical Environment",
+    "urls": ["https://www.epa.gov/ceam/ice"]
+  },
+  "GHS (BIN)": {
+    "definition": "substance classified in a binary manner as Category 1 (sensitizer) or NC",
+    "urls": [
+      "https://ntp.niehs.nih.gov/sites/default/files/2023-09/Herzler-WC12-poster-FD.pdf"
+    ]
+  },
+  "GHS (SUB)": {
+    "definition": "substance assigned to one of three classes: 1A sensitizer, 1B sensitizer, or NC.",
+    "urls": [
+      "https://ntp.niehs.nih.gov/sites/default/files/2023-09/Herzler-WC12-poster-FD.pdf"
+    ]
+  },
+  "GHS (BORDER)": {
+    "definition": "substance assigned to one of five classes: the three classes used in GHS (SUB) with different criteria (except NC); 1 (sensitizer, but subclassification not possible); NC/1B (substance may or may not be a sensitizer, but 1A can be ruled out)",
+    "urls": [
+      "https://ntp.niehs.nih.gov/sites/default/files/2023-09/Herzler-WC12-poster-FD.pdf"
+    ]
+  }
+}
