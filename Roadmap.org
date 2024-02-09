@@ -1,4 +1,5 @@
 #+title: Roadmap
+
 * Alpha Milestone
 ** [X] Tailwind integration
 ** [X] Convert key elements from ICE style.css to Tailwind
@@ -8,8 +9,19 @@
 ** [X] Seperate model from code
 ** [X] Make Summary Statistics more compact
 ** [X] Deploment for Demo
-- [[file:deploy/deploy.org][deploy.org]]
+** [-] Ability to upload user data
+* Beta Milestone
+** [X] Better looking navigation bar
+** [X] Button look and feel
+** [X] Responsive UI
+** [?] National Toxicology Program logo
+** [?] Instructions/Tutorials
+*** [X] Schema documentation
+** [-] Darkmode UI
 ** [-] Ability to run model
+** [ ] Some kind of histogram chart (ask Joe)
+** [ ] Icons
+** [ ] Export
 ** [ ] Attribution
 *** [ ] Chemistry Backdrop
 - https://openverse.org/image/0e7ae51b-00b1-4b46-9c3f-6fcbe55d276b?q=chemistry%20flask
@@ -20,19 +32,6 @@
 *** [ ] toxicology gov?
 *** [ ] inotiv?
 *** [ ] unilver?
-* Beta Milestone
-** [X] Better looking navigation bar
-** [X] Button look and feel
-** [X] Responsive UI
-** [?] National Toxicology Program logo
-** [?] Instructions/Tutorials
-*** [X] Schema documentation
-** [-] Darkmode UI
-** [-] Ability to upload user data
-** [ ] Some kind of histogram chart (ask Joe)
-** [ ] Icons
-** [-] Import
-** [ ] Export
 
 * [ ] Production Milestone
 ** [ ] Progressive web app infrastructure
