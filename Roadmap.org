@@ -10,6 +10,10 @@
 ** [X] Make Summary Statistics more compact
 ** [X] Deploment for Demo
 ** [-] Ability to upload user data
+*** [ ] parse .xlsx
+*** [ ] verify against schema
+- https://ajv.js.org/guide/why-ajv.html
+*** [ ] import xlsx
 * Beta Milestone
 ** [X] Better looking navigation bar
 ** [X] Button look and feel
