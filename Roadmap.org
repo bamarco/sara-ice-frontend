@@ -1,0 +1,40 @@
+#+title: Roadmap
+* Alpha Milestone
+** [X] Tailwind integration
+** [X] Convert key elements from ICE style.css to Tailwind
+** [X] ICE logo
+** [X] Model produces data rather than using play data
+** [X] Look and feel of Headers
+** [X] Seperate model from code
+** [X] Make Summary Statistics more compact
+** [X] Deploment for Demo
+- [[file:deploy/deploy.org][deploy.org]]
+** [-] Ability to run model
+** [ ] Attribution
+*** [ ] Chemistry Backdrop
+- https://openverse.org/image/0e7ae51b-00b1-4b46-9c3f-6fcbe55d276b?q=chemistry%20flask
+- https://www.flickr.com/photos/13639809@N03/
+*** [ ] Joe's original code
+*** [ ] myself
+*** [ ] mademonkeystudios
+*** [ ] toxicology gov?
+*** [ ] inotiv?
+*** [ ] unilver?
+* Beta Milestone
+** [X] Better looking navigation bar
+** [X] Button look and feel
+** [X] Responsive UI
+** [?] National Toxicology Program logo
+** [?] Instructions/Tutorials
+*** [X] Schema documentation
+** [-] Darkmode UI
+** [-] Ability to upload user data
+** [ ] Some kind of histogram chart (ask Joe)
+** [ ] Icons
+** [-] Import
+** [ ] Export
+
+* [ ] Production Milestone
+** [ ] Progressive web app infrastructure
+** [ ] Complex progressive web app compilation (alternatively executables for windows, mac, linux)
+** [ ] Security Audit
