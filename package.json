@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "pack": "./pack-schemas.sh"
+    "docs": ".scripts/generate-docs.sh",
+    "pack-schemas": ".scripts/pack-schemas.sh"
   },
   "dependencies": {
     "@vueuse/core": "^10.7.1",

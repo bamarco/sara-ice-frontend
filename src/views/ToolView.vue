@@ -14,7 +14,7 @@
           class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2">
           <p class="text-prose-subdued">drop files here...</p>
           <ul>
-            <li v-for="file in files" v-bind:key="file.name">
+            <li v-for="file in files" :key="file.name">
               <!-- TODO: use checksum rather than filename -->
               {{ file.name }}
             </li>
@@ -25,10 +25,17 @@
             Import DASS Inputs
           </button>
         </div>
+        <div class="flex">
+          <a
+            class="text-bravo underline hover:text-alpha"
+            href="/docs/schemas/dass">
+            DASS Input Format Documentation
+          </a>
+        </div>
       </section>
     </CardBack>
     <CardBack>
-      <section class="flex space-x-5">
+      <section class="flex items-center space-x-5">
         <div class="flex w-36 flex-col">
           <select class="rounded-lg border bg-box p-2 focus:border-alpha">
             <option selected>Geraniol</option>
@@ -41,6 +48,13 @@
             class="rounded-full bg-alpha px-4 py-2 text-lg text-alpha-prose">
             Run Analysis
           </button>
+        </div>
+        <div class="flex">
+          <a
+            class="text-bravo underline hover:text-alpha"
+            href="/docs/schemas/sara">
+            SARA Output Format Documentation
+          </a>
         </div>
       </section>
     </CardBack>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/07/schema",
-  "$id": "https://sara-ice-local.mademonkey.com/schemas/formats",
+  "$id": "https://sara-ice-local.mademonkey.com/schemas/formats.schema.json",
   "type": "object",
   "properties": {
     "eNotation": {

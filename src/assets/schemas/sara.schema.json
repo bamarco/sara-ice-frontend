@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/07/schema",
-  "$id": "https://sara-ice-local.mademonkey.com/schemas/sara",
+  "$id": "https://sara-ice-local.mademonkey.com/schemas/sara.schema.json",
   "title": "Skin Allergy Risk Assesment",
   "description": "Skin Allergy Risk Assessment (SARA) for a Substance",
   "type": "object",
   "properties": {
     "casRn": {
-      "$ref": "formats#/properties/casRn"
+      "$ref": "formats.schema.json#/properties/casRn"
     },
     "saraIceId": {
       "title": "SARA ICE ID",
@@ -23,27 +23,27 @@
     },
     "expectedEd01": {
       "title": "Expected ED 01",
-      "$ref": "formats#/properties/decimalProportion"
+      "$ref": "formats.schema.json#/properties/decimalProportion"
     },
     "probGhs1A": {
       "title": "Prob GHS 1A",
       "description": "Probability that GHS Classification is 1A",
-      "$ref": "formats#/properties/decimalProportion"
+      "$ref": "formats.schema.json#/properties/decimalProportion"
     },
     "probGhs1B": {
       "title": "Prob GHS 1B",
       "description": "Probability that GHS Classification is 1B",
-      "$ref": "formats#/properties/decimalProportion"
+      "$ref": "formats.schema.json#/properties/decimalProportion"
     },
     "probNc": {
       "title": "Probability GHS NC",
       "description": "Probability that GHS is Not Classified",
-      "$ref": "formats#/properties/decimalProportion"
+      "$ref": "formats.schema.json#/properties/decimalProportion"
     },
     "ghsBin": {
       "title": "GHS<sub>BIN</sub>",
       "description": "Globally Harmonized System for Hazard Communiction Binary Classification. Substance is classified in a binary manner as a Category 1 (sensitizer) or NC",
-      "$ref": "formats#/properties/numericalBoolean"
+      "$ref": "formats.schema.json#/properties/numericalBoolean"
     },
     "ghsSub": {
       "title": "GHS<sub>SUB</sub>",

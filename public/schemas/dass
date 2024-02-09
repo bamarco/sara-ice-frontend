@@ -3,48 +3,30 @@
   "$id": "https://sara-ice-local.mademonkey.com/schemas/dass",
   "title": "Defined Aproaches on Skin Sensitisation",
   "description": "Defined Aproaches on Skin Sensitisation (DASS)",
-  "title-format": "asciidoc",
-  "description-format": "asciidoc",
   "type": "object",
   "properties": {
     "casRn": {
-      "$ref": "attrs/casRn.schema.json"
+      "$ref": "formats#/properties/casRn"
     },
     "dpraCall": {
       "title": "DPRA Call",
       "description": "Direct Peptide Reactivity Assay - Call",
-      "allOf": [
-        {
-          "$ref": "attrs/numericalBoolean.schema.json"
-        }
-      ]
+      "anyOf": [{ "$ref": "formats#/properties/numericalBoolean" }]
     },
     "dpraPc": {
       "title": "DPRA pC",
       "description": "Direct Peptide Reactivity Assay - pC",
-      "allOf": [
-        {
-          "$ref": "attrs/decimalProportion.schema.json"
-        }
-      ]
+      "anyOf": [{ "$ref": "formats#/properties/decimalProportion" }]
     },
     "dpraPk": {
       "title": "DPRA pC",
       "description": "Direct Peptide Reactivity Assay - pC",
-      "allOf": [
-        {
-          "$ref": "attrs/decimalProportion.schema.json"
-        }
-      ]
+      "anyOf": [{ "$ref": "formats#/properties/decimalProportion" }]
     },
     "hclatCall": {
       "title": "hCLAT Call",
       "description": "Human Cell Line Activation Test - Call",
-      "allOf": [
-        {
-          "$ref": "attrs/numericalBoolean.schema.json"
-        }
-      ]
+      "anyOf": [{ "$ref": "formats#/properties/numericalBoolean" }]
     },
     "hclatMit": {
       "title": "hCLAT MIT",
@@ -52,25 +34,14 @@
       "type": "number"
     },
     "ksCall": {
-      "allOf": [
-        {
-          "$ref": "attrs/numericalBoolean.schema.json"
-        }
-      ]
+      "anyOf": [{ "$ref": "formats#/properties/numericalBoolean" }]
     },
     "inSilicoCall": {
-      "allOf": [
-        {
-          "$ref": "attrs/numericalBoolean.schema.json"
-        }
-      ]
+      "anyOf": [{ "$ref": "formats#/properties/numericalBoolean" }]
     },
     "inSilicoAd": {
       "type": "string",
-      "enum": [
-        "IN",
-        "OUT"
-      ]
+      "enum": ["IN", "OUT"]
     }
   }
 }
