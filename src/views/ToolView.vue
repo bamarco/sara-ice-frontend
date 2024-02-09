@@ -3,12 +3,19 @@
     <DH :h="1"> Skin Allergy Risk Assessment — SARA </DH>
     <CardBack>
       <section class="flex w-full items-center space-x-5">
-        <a
-          class="rounded border border-prose bg-charlie p-2"
-          href="/static/dass-app-data.template.xlsx"
-          download>
-          DASS Inputs Template
-        </a>
+        <div class="flex flex-col">
+          <a
+            class="text-bravo underline hover:text-alpha"
+            href="/static/dass-app-data.template.xlsx"
+            download>
+            Download DASS Input Template
+          </a>
+          <a
+            class="text-bravo underline hover:text-alpha"
+            href="/docs/schemas/dass">
+            DASS Input Format Documentation
+          </a>
+        </div>
         <div
           ref="dropZoneRef"
           class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2">
@@ -24,13 +31,6 @@
             <!-- TODO: Use OS file chooser on button press -->
             Import DASS Inputs
           </button>
-        </div>
-        <div class="flex">
-          <a
-            class="text-bravo underline hover:text-alpha"
-            href="/docs/schemas/dass">
-            DASS Input Format Documentation
-          </a>
         </div>
       </section>
     </CardBack>
