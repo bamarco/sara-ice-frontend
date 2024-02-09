@@ -15,7 +15,9 @@
 - https://ajv.js.org/guide/why-ajv.html
 *** [ ] import xlsx
 ** [ ] Try github pages as host
+*** [ ] Unpublish srht site
 ** [ ] Refactor glossary because of schema documentation
+** [ ] Simulate run button
 * Beta Milestone
 ** [X] Better looking navigation bar
 ** [X] Button look and feel
