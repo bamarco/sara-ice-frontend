@@ -14,6 +14,8 @@
 *** [ ] verify against schema
 - https://ajv.js.org/guide/why-ajv.html
 *** [ ] import xlsx
+** [ ] Try github pages as host
+** [ ] Refactor glossary because of schema documentation
 * Beta Milestone
 ** [X] Better looking navigation bar
 ** [X] Button look and feel
