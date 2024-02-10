@@ -3,17 +3,17 @@
     <DH :h="1"> Skin Allergy Risk Assessment — SARA </DH>
     <CardBack>
       <section class="flex w-full items-center space-x-5">
-        <div class="flex flex-col">
+        <div class="flex min-w-fit flex-col items-center space-y-4">
           <a
-            class="text-bravo underline hover:text-alpha"
+            class="rounded border border-prose bg-bravo p-2 text-bravo-prose hover:text-alpha"
             href="/static/dass-app-data.template.xlsx"
             download>
-            Download DASS Input Template
+            Input Template
           </a>
           <a
-            class="text-bravo underline hover:text-alpha"
+            class="rounded border border-prose bg-bravo p-2 text-bravo-prose hover:text-prose"
             href="/docs/schemas/dass">
-            DASS Input Format Documentation
+            Input Description
           </a>
         </div>
         <div
