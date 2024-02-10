@@ -10,14 +10,8 @@
 ** [X] Make Summary Statistics more compact
 ** [X] Deploment for Demo
 ** [X] Simulate run button
-** [-] Ability to upload user data
-*** [X] import xlsx
-*** [ ] parse .xlsx
-*** [ ] verify against schema
-- https://ajv.js.org/guide/why-ajv.html
 ** [ ] Try github pages as host
 *** [ ] Unpublish srht site
-** [ ] Refactor glossary because of schema documentation
 * Beta Milestone
 ** [X] Better looking navigation bar
 ** [X] Button look and feel
@@ -27,9 +21,15 @@
 *** [X] Schema documentation
 ** [-] Darkmode UI
 ** [-] Ability to run model
+** [-] Ability to upload user data
+*** [X] import xlsx
+*** [ ] parse .xlsx
+*** [ ] verify against schema
+- https://ajv.js.org/guide/why-ajv.html
 ** [ ] Some kind of histogram chart (ask Joe)
 ** [ ] Icons
 ** [ ] Export
+** [ ] Refactor glossary because of schema documentation
 ** [ ] Attribution
 *** [ ] Chemistry Backdrop
 - https://openverse.org/image/0e7ae51b-00b1-4b46-9c3f-6fcbe55d276b?q=chemistry%20flask
