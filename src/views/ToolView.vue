@@ -5,8 +5,7 @@
       <section class="flex w-full items-center space-x-5">
         <div
           ref="dropZoneRef"
-          class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2"
-        >
+          class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2">
           <p class="text-prose-subdued">drop .xlsx files here...</p>
           <ul>
             <li v-for="file in files" :key="file.name">
