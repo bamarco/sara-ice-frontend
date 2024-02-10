@@ -3,34 +3,26 @@
     <DH :h="1"> Skin Allergy Risk Assessment — SARA </DH>
     <CardBack>
       <section class="flex w-full items-center space-x-5">
-        <div class="flex min-w-fit flex-col items-center space-y-4">
-          <a
-            class="rounded border border-prose bg-bravo p-2 text-bravo-prose hover:text-alpha"
-            href="/static/dass-app-data.template.xlsx"
-            download>
-            Input Template
-          </a>
-          <a
-            class="rounded border border-prose bg-bravo p-2 text-bravo-prose hover:text-prose"
-            href="/docs/schemas/dass">
-            Input Description
-          </a>
-        </div>
         <div
           ref="dropZoneRef"
           class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2">
-          <p class="text-prose-subdued">drop files here...</p>
+          <p class="text-prose-subdued">drop .xlsx files here...</p>
           <ul>
             <li v-for="file in files" :key="file.name">
               <!-- TODO: use checksum rather than filename -->
               {{ file.name }}
             </li>
           </ul>
-          <button
-            class="rounded-full bg-alpha px-4 py-2 text-lg text-alpha-prose">
+          <FunctionButton :on="open">
             <!-- TODO: Use OS file chooser on button press -->
             Import DASS Inputs
-          </button>
+          </FunctionButton>
+        </div>
+        <div class="flex min-w-fit flex-col items-center space-y-4">
+          <LinkButton to="/static/dass-app-data.template.xlsx" download>
+            Input Template
+          </LinkButton>
+          <LinkButton to="/docs/schemas/dass"> Input Description </LinkButton>
         </div>
       </section>
     </CardBack>
@@ -43,19 +35,8 @@
           </select>
           <label class="text-prose-subdued">Substance</label>
         </div>
-        <div class="flex h-full items-start">
-          <button
-            class="rounded-full bg-alpha px-4 py-2 text-lg text-alpha-prose">
-            Run Analysis
-          </button>
-        </div>
-        <div class="flex">
-          <a
-            class="text-bravo underline hover:text-alpha"
-            href="/docs/schemas/sara">
-            SARA Output Format Documentation
-          </a>
-        </div>
+        <FunctionButton> Run Analysis </FunctionButton>
+        <LinkButton to="/docs/schemas/sara"> Output Description </LinkButton>
       </section>
     </CardBack>
     <CardBack>
@@ -67,25 +48,32 @@
 <script setup>
 import { computed, ref } from "vue";
 import DH from "@/components/DynamicHeading.vue";
+import FunctionButton from "@/components/FunctionButton.vue";
+import LinkButton from "@/components/LinkButton.vue";
 import CardBack from "@/components/CardBack.vue";
 import SubstanceAnalysis from "@/components/SubstanceAnalysis.vue";
 import report from "@/assets/example-report.json";
-import { useDropZone } from "@vueuse/core";
+import { useDropZone, useFileDialog } from "@vueuse/core";
 
 const dropZoneRef = ref();
 const files = ref([]);
 const substance = computed(() => report["SARA_Geraniol_DPRA_KERAT_HCLAT"]);
 
+const { open, onChange } = useFileDialog({
+  accept: ".xlsx",
+});
+
 function onDrop(droppedFiles) {
   for (const file of droppedFiles) {
     files.value.push(file);
   }
-  console.log(files);
 }
+
+onChange((selectedFiles) => onDrop(selectedFiles));
 
 //const { isOverDropZone } =
 useDropZone(dropZoneRef, {
   onDrop,
-  //dataTypes: [],
+  dataTypes: [".xlsx"],
 });
 </script>

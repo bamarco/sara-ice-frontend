@@ -1,8 +1,7 @@
 <template>
   <h1
-    class="boder-alpha border-b pb-2 text-xl font-bold text-alpha"
-    v-if="h == 1"
-  >
+    class="border-b border-alpha pb-2 text-xl font-bold text-alpha"
+    v-if="h == 1">
     <slot />
   </h1>
   <h2 class="text-lg font-semibold text-bravo" v-else-if="h == 2">
