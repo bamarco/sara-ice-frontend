@@ -10,10 +10,10 @@
 ** [X] Make Summary Statistics more compact
 ** [X] Deploment for Demo
 ** [-] Ability to upload user data
+*** [X] import xlsx
 *** [ ] parse .xlsx
 *** [ ] verify against schema
 - https://ajv.js.org/guide/why-ajv.html
-*** [ ] import xlsx
 ** [ ] Try github pages as host
 *** [ ] Unpublish srht site
 ** [ ] Refactor glossary because of schema documentation
