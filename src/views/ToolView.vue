@@ -13,10 +13,7 @@
               {{ file.name }}
             </li>
           </ul>
-          <FunctionButton :on="open">
-            <!-- TODO: Use OS file chooser on button press -->
-            Import Inputs
-          </FunctionButton>
+          <FunctionButton :on="open"> Import Inputs </FunctionButton>
         </div>
         <div class="flex min-w-fit flex-col items-center space-y-4">
           <LinkButton to="/static/dass-app-data.template.xlsx" download>
