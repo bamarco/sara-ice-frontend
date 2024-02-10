@@ -5,7 +5,8 @@
       <section class="flex w-full items-center space-x-5">
         <div
           ref="dropZoneRef"
-          class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2">
+          class="flex size-full flex-col items-center justify-between space-y-2 border-2 border-dashed border-prose bg-box p-2"
+        >
           <p class="text-prose-subdued">drop .xlsx files here...</p>
           <ul>
             <li v-for="file in files" :key="file.name">
@@ -15,7 +16,7 @@
           </ul>
           <FunctionButton :on="open">
             <!-- TODO: Use OS file chooser on button press -->
-            Import DASS Inputs
+            Import Inputs
           </FunctionButton>
         </div>
         <div class="flex min-w-fit flex-col items-center space-y-4">
@@ -27,7 +28,7 @@
       </section>
     </CardBack>
     <CardBack>
-      <section class="flex items-center space-x-5">
+      <section class="flex items-center space-x-4">
         <div class="flex w-36 flex-col">
           <select class="rounded-lg border bg-box p-2 focus:border-alpha">
             <option selected>Geraniol</option>
@@ -35,12 +36,17 @@
           </select>
           <label class="text-prose-subdued">Substance</label>
         </div>
-        <FunctionButton> Run Analysis </FunctionButton>
-        <LinkButton to="/docs/schemas/sara"> Output Description </LinkButton>
+        <div class="flex space-x-4">
+          <FunctionButton :on="simulate">
+            <span v-if="!analysis"> "Run" Analysis </span>
+            <span v-else> Clear Analysis </span>
+          </FunctionButton>
+          <LinkButton to="/docs/schemas/sara"> Output Description </LinkButton>
+        </div>
       </section>
     </CardBack>
     <CardBack>
-      <SubstanceAnalysis :substance="substance" :h="2" />
+      <SubstanceAnalysis v-if="analysis" :substance="substance" :h="2" />
     </CardBack>
   </section>
 </template>
@@ -58,6 +64,7 @@ import { useDropZone, useFileDialog } from "@vueuse/core";
 const dropZoneRef = ref();
 const files = ref([]);
 const substance = computed(() => report["SARA_Geraniol_DPRA_KERAT_HCLAT"]);
+const analysis = ref(false);
 
 const { open, onChange } = useFileDialog({
   accept: ".xlsx",
@@ -67,6 +74,10 @@ function onDrop(droppedFiles) {
   for (const file of droppedFiles) {
     files.value.push(file);
   }
+}
+
+function simulate() {
+  analysis.value = !analysis.value;
 }
 
 onChange((selectedFiles) => onDrop(selectedFiles));

@@ -9,6 +9,7 @@
 ** [X] Seperate model from code
 ** [X] Make Summary Statistics more compact
 ** [X] Deploment for Demo
+** [X] Simulate run button
 ** [-] Ability to upload user data
 *** [X] import xlsx
 *** [ ] parse .xlsx
@@ -17,7 +18,6 @@
 ** [ ] Try github pages as host
 *** [ ] Unpublish srht site
 ** [ ] Refactor glossary because of schema documentation
-** [ ] Simulate run button
 * Beta Milestone
 ** [X] Better looking navigation bar
 ** [X] Button look and feel
