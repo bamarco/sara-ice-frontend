@@ -2,7 +2,6 @@
 local/
 cache/
 dist/
-docs/
 
 # Vite
 ## Logs

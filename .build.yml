@@ -17,8 +17,6 @@ tasks:
       # build Site
         cd $site/vite
         npm ci
-        npm run pack-schemas
-        npm run docs
         npm run build
   - package: |
       # Package Site
