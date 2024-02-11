@@ -24,6 +24,9 @@
       </section>
     </CardBack>
     <CardBack>
+      <!--section>"{{ inputs }}"</section-->
+    </CardBack>
+    <CardBack>
       <section class="flex items-center space-x-4">
         <div class="flex w-36 flex-col">
           <select class="rounded-lg border bg-box p-2 focus:border-alpha">
@@ -56,19 +59,35 @@ import CardBack from "@/components/CardBack.vue";
 import SubstanceAnalysis from "@/components/SubstanceAnalysis.vue";
 import report from "@/assets/example-report.json";
 import { useDropZone, useFileDialog } from "@vueuse/core";
+import excel from "exceljs";
 
 const dropZoneRef = ref();
 const files = ref([]);
 const substance = computed(() => report["SARA_Geraniol_DPRA_KERAT_HCLAT"]);
 const analysis = ref(false);
+const inputs = ref([]);
 
 const { open, onChange } = useFileDialog({
   accept: ".xlsx",
 });
 
+async function injectInput(file) {
+  const workbook = new excel.Workbook();
+  const buffer = await file.arrayBuffer();
+  console.log(file);
+  const inbook = await workbook.xlsx.load(buffer);
+  const insheet = inbook.worksheets[0];
+  inputs.value.push(insheet);
+  console.log(insheet);
+  insheet.eachRow({ includeEmpty: true }, function (row, rowNumber) {
+    console.log("Row " + rowNumber + " = " + JSON.stringify(row.values));
+  });
+}
+
 function onDrop(droppedFiles) {
   for (const file of droppedFiles) {
     files.value.push(file);
+    injectInput(file);
   }
 }
 

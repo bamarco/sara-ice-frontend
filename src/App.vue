@@ -27,7 +27,21 @@
     </header>
     <div class="flex min-h-screen justify-center bg-canvas backdrop-blur-sm">
       <main class="flex w-192 flex-col">
-        <RouterView />
+        <RouterView v-slot="{ Component }">
+          <template v-if="Component">
+            <Transition mode="out-in">
+              <KeepAlive>
+                <Suspense>
+                  <!-- main content -->
+                  <component :is="Component"></component>
+
+                  <!-- loading state -->
+                  <template #fallback> Loading... </template>
+                </Suspense>
+              </KeepAlive>
+            </Transition>
+          </template>
+        </RouterView>
       </main>
     </div>
   </div>
